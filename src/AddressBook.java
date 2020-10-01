@@ -26,4 +26,7 @@ public class AddressBook {
         }
         return null;
     }
+    private int newMethod(){
+        return 0;
+    }
 }

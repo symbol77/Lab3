@@ -1,20 +1,25 @@
-import java.util.Map;
+import java.util.ArrayList;
 
 public class AddressBook {
-    private Map<String, BuddyInfo> book;
+    private ArrayList<BuddyInfo> book;
 
     public static void main(String[] arg){
-        BuddyInfo buddy = new BuddyInfo("Carl", "There", "123");
+        BuddyInfo buddy = new BuddyInfo("Tom", "There", "123");
         AddressBook addressBook = new AddressBook();
         addressBook.addBuddy(buddy);
-        addressBook.removeBuddy(buddy);
+        addressBook.removeBuddy(0);
     }
 
     private void addBuddy(BuddyInfo buddy){
-        book.put(buddy.getName(), buddy);
+        if (buddy != null) {
+            book.add(buddy);
+        }
     }
 
-    private void removeBuddy(BuddyInfo buddy){
-        book.remove(buddy.getName());
+    private BuddyInfo removeBuddy(int index){
+        if (index >= 0 && index < book.size()) {
+            return book.remove(index);
+        }
+        return null;
     }
 }

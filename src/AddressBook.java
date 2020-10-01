@@ -3,6 +3,10 @@ import java.util.ArrayList;
 public class AddressBook {
     private ArrayList<BuddyInfo> book;
 
+    public AddressBook(){
+        book = new ArrayList<>();
+    }
+
     public static void main(String[] arg){
         BuddyInfo buddy = new BuddyInfo("Tom", "There", "123");
         AddressBook addressBook = new AddressBook();

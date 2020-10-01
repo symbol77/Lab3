@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-
+// This is an edit outside of IntelliJ
 public class AddressBook {
     private ArrayList<BuddyInfo> book;
 
